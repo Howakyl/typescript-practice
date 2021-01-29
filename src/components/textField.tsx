@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const TextField = () => {
+interface Props {
+    text: string
+}
+
+export const TextField: React.FC<Props> = () => {
     return (
         <div>
             <input />
