@@ -8,7 +8,11 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <TextField text="hello" person={{firstName: 'Kyle', lastName: 'Howard'}}/>
+        <TextField text="hello" person={{firstName: 'Kyle', lastName: 'Howard'}}
+        handleChange={e => {
+          console.log('changed!')
+        }}
+        />
       </header>
     </div>
   );
