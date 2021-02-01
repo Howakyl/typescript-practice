@@ -1,7 +1,10 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
 
 interface Props {
-    children: (count: number, setCount:React.Dispatch<React.SetStateAction<number>> ) => JSX.Element | null
+    children: (data: {
+        count: number;
+        setCount:React.Dispatch<React.SetStateAction<number>>;
+    }) => JSX.Element | null;
 }
 
 export const Counter: React.FC<Props> = ({children}) => {
@@ -10,7 +13,7 @@ export const Counter: React.FC<Props> = ({children}) => {
 
     return (
         <div>
-            {children(count,setCount)}
+            {children({ count,setCount })}
         </div>
     );
 }
