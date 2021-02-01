@@ -19,7 +19,7 @@ interface TextNode {
     text: string
 }
 
-export const TextField: React.FC<Props> = ({handleChange}) => {
+export const TextField: React.FC<Props> = (props) => {
 
     // const [count, setCount] = useState<number | null >(5);
     // const [count, setCount] = useState<TextNode>({text: 'hi'})
@@ -30,8 +30,8 @@ export const TextField: React.FC<Props> = ({handleChange}) => {
 
     return (
         <div ref={divRef}>
-            <input ref={inputRef} onChange={handleChange}/>
-            {/* <p>My name is {props.person?.firstName} {props.person?.lastName}</p> */}
+            <input ref={inputRef} onChange={props.handleChange}/>
+            <p>My name is {props.person?.firstName} {props.person?.lastName}</p>
             {/* <p>{count}</p> */}
         </div>
     );
